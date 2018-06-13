@@ -1,4 +1,4 @@
-setwd("C:/Users/User/Desktop/Διαφορα Σεμιναρια,E-learnings/R-Course-HTML-Notes/R-for-Data-Science-and-Machine-Learning/Training Exercises/Capstone and Data Viz Projects")
+setwd("C:/Users/User/Desktop/Γ„Γ©Γ΅Γ¶Γ―Γ±Γ΅ Γ“Γ¥Γ¬Γ©Γ­Γ΅Γ±Γ©Γ΅,E-learnings/R-Course-HTML-Notes/R-for-Data-Science-and-Machine-Learning/Training Exercises/Capstone and Data Viz Projects")
 
 batting <- read.csv("Capstone Project/Batting.csv")
 
@@ -56,7 +56,7 @@ replace_players<-combo %>%
   filter(yearID==2001) %>% 
   select(playerID,yearID,AB,OBP,salary)
 
-sum(lost_2001$AB)
+sum(lost_2001$AB) 
 mean(lost_2001$OBP)
 
 library(ggplot2)
@@ -65,7 +65,7 @@ ggplot(replace_players,aes(OBP,salary)) + geom_point(size=2) +
 
 replace_players<-replace_players %>% filter(salary<8000000 & OBP>0)
 
-1469/3
+1469/3 #Finding the AB we need for each player
 
 replace_players<- replace_players %>% filter(AB>=450)
 replace_players<- replace_players %>% arrange(desc(OBP)) %>% 
